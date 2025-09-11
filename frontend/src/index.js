@@ -20,19 +20,19 @@ calculateButton.addEventListener("click", () => {
     };
 
     if (
-        !isValid(warmup, 0, 20, 5) ||
-        !isValid(running, 0  , 60, 5) ||
-        !isValid(physicalStrength, 0, 60, 5) ||
-        !isValid(coolDown, 0, 20, 5)
+        !isValid(warmup, 0, 120, 5) ||
+        !isValid(running, 0  , 120, 5) ||
+        !isValid(physicalStrength, 0, 120, 5) ||
+        !isValid(coolDown, 0, 120, 5)
     ) {
-        alert("Bitte gültige Werte im angegebenen Bereich eingeben!");
+        alert("Please enter values between 0 and 120 in increments of 5!");
         return;
     }
 
     const fullTime = warmup + running + physicalStrength + coolDown;
 
     if (fullTime <30 || fullTime > 120) {
-        alert("Bitte zwischen 30 und 120 Minuten ausfüllen");
+        alert("Please complete between 30 and 120 minutes.");
         return;
     }
 
