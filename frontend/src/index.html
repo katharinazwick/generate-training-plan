@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trainig calculator</title>
+    <link rel="stylesheet" href="../style/index.css">
+</head>
+
+<body>
+<div id="containerHeader">
+    <h1 id="header">training calculation</h1>
+</div>
+
+<p></p>
+
+<div id="containerTimeinput">
+    <h2>Schedule</h2>
+    <div id="schedule">
+        <div class="input-row">
+            <label for="warmupInput">Warmup:</label>
+            <input id="warmupInput" type="number" min="5" max="15" step="5" placeholder="ideal between 5 - 15">
+        </div>
+        <div class="input-row">
+            <label for="runningInput">Running:</label>
+            <input id="runningInput" type="number" min="15" max="40" step="5" placeholder="ideal between 15 - 40">
+        </div>
+        <div class="input-row">
+            <label for="physicalStrengthInput">Physical Strength:</label>
+            <input id="physicalStrengthInput" type="number" min="10" max="30" step="5" placeholder="ideal between 10 - 30">
+        </div>
+        <div class="input-row">
+            <label for="coolDownInput">Cool Down:</label>
+            <input id="coolDownInput" type="number" min="5" max="15" step="5" placeholder="ideal between 5 - 15">
+        </div>
+    </div>
+    <div id="totalTime">Total time: 0 min</div>
+    <button id="calculateButton">Calculate</button>
+</div>
+
+
+<div id="workoutContainer"></div>
+
+
+
+<script type="module" src="./index.js"></script>
+<script type="module" src="./calculateFullTime.js"></script>
+<script type="module" src="./windowLoad.js"></script>
+
+</body>
+</html>
