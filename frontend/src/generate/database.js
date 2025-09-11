@@ -61,17 +61,17 @@ export const database = [
         name: "Lauf ABC",
         time: 5,
         description:"",
-        part:"coolDown",
+        part:"cooldown",
     },{
         name: "Lauf ABC",
         time: 5,
         description:"",
-        part:"coolDown",
+        part:"cooldown",
     },{
         name: "Lauf ABC",
         time: 5,
         description:"",
-        part:"coolDown",
+        part:"cooldown",
     }, {
         name: "Lauf ABC",
         time: 5,

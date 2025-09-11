@@ -2,7 +2,7 @@ const inputs = [
     document.getElementById("warmupInput"),
     document.getElementById("runningInput"),
     document.getElementById("physicalStrengthInput"),
-    document.getElementById("coolDownInput")
+    document.getElementById("cooldownInput")
 ];
 
 const totalTimeDisplay = document.getElementById("totalTime");

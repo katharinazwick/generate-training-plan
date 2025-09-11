@@ -7,7 +7,7 @@ calculateButton.addEventListener("click", () => {
     const warmup = Number(document.getElementById("warmupInput").value);
     const running = Number(document.getElementById("runningInput").value);
     const physicalStrength = Number(document.getElementById("physicalStrengthInput").value);
-    const coolDown = Number(document.getElementById("coolDownInput").value);
+    const cooldown = Number(document.getElementById("cooldownInput").value);
 
     // Validierung: Min, Max und Step prüfen
     const isValid = (value, min, max, step) => {
@@ -23,13 +23,13 @@ calculateButton.addEventListener("click", () => {
         !isValid(warmup, 0, 120, 5) ||
         !isValid(running, 0  , 120, 5) ||
         !isValid(physicalStrength, 0, 120, 5) ||
-        !isValid(coolDown, 0, 120, 5)
+        !isValid(cooldown, 0, 120, 5)
     ) {
         alert("Please enter values between 0 and 120 in increments of 5!");
         return;
     }
 
-    const fullTime = warmup + running + physicalStrength + coolDown;
+    const fullTime = warmup + running + physicalStrength + cooldown;
 
     if (fullTime <30 || fullTime > 120) {
         alert("Please complete between 30 and 120 minutes.");
@@ -37,7 +37,7 @@ calculateButton.addEventListener("click", () => {
     }
 
     // Werte in Objekt speichern
-    const timeForParts = { warmup, running, physicalStrength, coolDown };
+    const timeForParts = { warmup, running, physicalStrength, cooldown: cooldown };
 
     // Berechnung ausführen
     outputDatas(timeForParts);
