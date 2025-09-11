@@ -1,4 +1,4 @@
-import {getRandomTraining} from "./generatePlan.js";
+import {getRandomTraining} from "./generate/generatePlan.js";
 
 export function outputDatas(timeForParts) {
     const data = getRandomTraining(timeForParts);
@@ -11,8 +11,9 @@ export function outputDatas(timeForParts) {
 
         const title = document.createElement('div');
         title.className = 'part-title';
-        title.textContent = part.charAt(0).toUpperCase() + part.slice(1);
+        title.textContent = part.charAt(0).toUpperCase() + part.slice(1) + " " +  timeForParts[part];
         section.appendChild(title);
+        console.log(timeForParts)
 
         data[part].forEach(ex => {
             const row = document.createElement('div');
