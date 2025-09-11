@@ -1,4 +1,4 @@
-import {getRandomTrainingForPart} from "./combination.js";
+import {getRandomTrainingForPart} from "./generatePlanForParts.js";
 
 export function getRandomTraining(timeForParts) {
     return{

@@ -1,4 +1,4 @@
-export const training = [
+export const database = [
     {
         name: "Verfolgungslauf 400m Zweier Partner mit Zeitabstand",
         time: 10,
