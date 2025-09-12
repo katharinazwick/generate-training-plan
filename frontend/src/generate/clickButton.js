@@ -37,17 +37,10 @@ export function buttonIsClicked() {
             return;
         }
 
-        const fullTime = warmup + running + physicalStrength + cooldown;
-
-        if (fullTime < 30 || fullTime > 120) {
-            alert("Please complete between 30 and 120 minutes.");
-            return;
-        }
-
         const timeForParts = {warmup, running, physicalStrength, cooldown};
 
         for (let key in timeForParts) {
-            if (timeForParts[key] === 0) {
+            if (timeForParts[key] === 0 && (key === "warmup" || key === "cooldown")) {
                 timeForParts[key] = 10;
             }
         }
