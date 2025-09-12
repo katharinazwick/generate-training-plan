@@ -26,7 +26,6 @@ export function getRandomTrainingForPart(part, timeForParts, targetAverageIntens
         if (
             newTime <= targetTime &&
             (usedTypes.has(ex.type) || usedTypes.size < 2) &&
-            newAverage >= targetAverageIntensity - 1 &&
             newAverage <= targetAverageIntensity + 1
         ) {
             result.push(ex);
@@ -35,13 +34,8 @@ export function getRandomTrainingForPart(part, timeForParts, targetAverageIntens
             usedTypes.add(ex.type);
         }
 
-        // Stop, wenn Zeit erreicht oder Durchschnitt im Bereich
-        if (
-            currentTime >= targetTime
-            /*||
-            (result.length > 0 && intensitySum / result.length >= targetAverageIntensity - 1 &&
-                intensitySum / result.length <= targetAverageIntensity + 1)*/
-        ) {
+        // Stop nur, wenn Zeit erreicht
+        if (currentTime >= targetTime) {
             break;
         }
     }
