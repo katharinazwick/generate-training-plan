@@ -1,5 +1,7 @@
 import {parts} from "./parts.js";
 //erneut würfeln pro part
+//intensität genau berechnen und irgendwo angeben
+
 export const database = [
     {
         name: "Lauf-ABC",

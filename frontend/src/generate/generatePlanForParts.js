@@ -1,5 +1,6 @@
 import {database} from "./database.js";
 
+
 export function getRandomTrainingForPart(part, timeForParts, targetAverageIntensity) {
     const partExercises = database.filter(ex => ex.part === part);
     const targetTime = timeForParts[part];
@@ -36,9 +37,10 @@ export function getRandomTrainingForPart(part, timeForParts, targetAverageIntens
 
         // Stop, wenn Zeit erreicht oder Durchschnitt im Bereich
         if (
-            currentTime >= targetTime ||
+            currentTime >= targetTime
+            /*||
             (result.length > 0 && intensitySum / result.length >= targetAverageIntensity - 1 &&
-                intensitySum / result.length <= targetAverageIntensity + 1)
+                intensitySum / result.length <= targetAverageIntensity + 1)*/
         ) {
             break;
         }

@@ -1,11 +1,11 @@
 import {getRandomTrainingForPart} from "./generatePlanForParts.js";
 import {parts} from "./parts.js";
-//get intensity from web
-export function getRandomTraining(timeForParts) {
+
+export function getRandomTraining(timeForParts, targetAverageIntensity) {
     return{
-            warmup: getRandomTrainingForPart(parts[0], timeForParts, 1),
-        running: getRandomTrainingForPart(parts[1], timeForParts, 1),
-        physicalStrength: getRandomTrainingForPart(parts[2], timeForParts, 1),
-        cooldown: getRandomTrainingForPart(parts[3], timeForParts, 1)
+        warmup: getRandomTrainingForPart(parts[0], timeForParts, targetAverageIntensity),
+        running: getRandomTrainingForPart(parts[1], timeForParts, targetAverageIntensity),
+        physicalStrength: getRandomTrainingForPart(parts[2], timeForParts, targetAverageIntensity),
+        cooldown: getRandomTrainingForPart(parts[3], timeForParts, targetAverageIntensity)
     };
 }

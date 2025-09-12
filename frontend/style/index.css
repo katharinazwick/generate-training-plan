@@ -82,6 +82,17 @@
     font-family: Arial, sans-serif;
 }
 
+.exercise-row.dragging {
+    opacity: 0.5;
+    background: #e0e0e0;
+}
+
+.exercise-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 /* Part-Section */
 .part-section {
     display: flex;
@@ -132,3 +143,11 @@
     color: #666;
     font-size: 0.9em;
 }
+
+.part-cube {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
