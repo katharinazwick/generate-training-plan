@@ -16,15 +16,14 @@ export function outputDatas(data, meta) {
         cube.innerText = '🎲';
         cube.className = 'part-cube';
         cube.addEventListener('click', () => {
-            console.log(part);
             data[part] = getRandomTrainingForPart(part, meta.timeForParts, meta.intensity);
-            console.log(data[part]);
+            outputDatas(data, meta);
+            updateUrlWithData(data, meta);
         });
 
         // Text der Überschrift
         const text = document.createElement('span');
         text.textContent = part.charAt(0).toUpperCase() + part.slice(1) + " " + data[part].reduce((sum, ex) => sum + ex.time, 0);
-
         // Würfel + Text in die Überschrift einfügen
         title.appendChild(cube);
         title.appendChild(text);
@@ -34,7 +33,6 @@ export function outputDatas(data, meta) {
         // Container für Übungen
         const exerciseContainer = document.createElement('div');
         exerciseContainer.className = 'exercise-container';
-
         data[part].forEach((ex, index) => {
             const row = document.createElement('div');
             row.className = 'exercise-row';
@@ -68,7 +66,7 @@ export function outputDatas(data, meta) {
                 data[part] = newOrder;
 
                 // URL aktualisieren
-                updateUrlWithData(data);
+                updateUrlWithData(data, meta);
 
             });
 

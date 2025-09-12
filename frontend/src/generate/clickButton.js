@@ -49,6 +49,6 @@ export function buttonIsClicked() {
         const meta = { timeForParts: { ...timeForParts }, intensity };
 
         outputDatas(data, meta);
-        updateUrlWithData(data);
+        updateUrlWithData(data, meta);
     });
 }

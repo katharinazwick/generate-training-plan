@@ -1,11 +1,11 @@
 import { database } from "../generate/database.js";
 
 // wandelt die IDs aus der URL in richtige Objekte um
-export function resolveExercises(urlData) {
+export function resolveExercises(data) {
     const resolved = {};
 
-    Object.keys(urlData).forEach(part => {
-        resolved[part] = urlData[part]
+    Object.keys(data).forEach(part => {
+        resolved[part] = data[part]
             .map(id => database.find(ex => ex.id === id))
             .filter(Boolean);
     });

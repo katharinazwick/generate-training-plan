@@ -2,12 +2,14 @@ import {resolveExercises} from "./resolveExercises.js";
 import {outputDatas} from "../output/output.js";
 import {readUrlData} from "./readUrl.js";
 import {buttonIsClicked} from "../generate/clickButton.js";
+import {fillSchedule} from "../schedule/fillSchedule.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-    const urlData = readUrlData();
-    if (Object.keys(urlData).length > 0) {
-        const resolved = resolveExercises(urlData);
-        outputDatas(resolved);
+    const {data, meta} = readUrlData();
+    const resolved = resolveExercises(data);
+    if (Object.keys(data).length > 0) {
     }
-    buttonIsClicked()
+    outputDatas(resolved, meta);
+    fillSchedule(meta);
+    buttonIsClicked();
 });
