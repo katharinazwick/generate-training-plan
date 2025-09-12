@@ -1,5 +1,5 @@
 import {resolveExercises} from "./resolveExercises.js";
-import {outputDatas} from "../output.js";
+import {outputDatas} from "../output/output.js";
 import {readUrlData} from "./readUrl.js";
 import {buttonIsClicked} from "../generate/clickButton.js";
 

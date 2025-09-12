@@ -1,4 +1,5 @@
-import {updateUrlWithData} from "./link/updateUrl.js";
+import {updateUrlWithData} from "../link/updateUrl.js";
+import {getRandomTrainingForPart} from "../generate/generatePlanForParts.js";
 
 export function outputDatas(data) {
     const container = document.getElementById('workoutContainer');

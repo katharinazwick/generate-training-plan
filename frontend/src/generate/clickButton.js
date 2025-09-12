@@ -1,6 +1,6 @@
 import {getRandomTraining} from "./generatePlan.js";
 import {updateUrlWithData} from "../link/updateUrl.js";
-import {outputDatas} from "../output.js";
+import {outputDatas} from "../output/output.js";
 
 export function buttonIsClicked() {
 
@@ -45,6 +45,12 @@ export function buttonIsClicked() {
         }
 
         const timeForParts = {warmup, running, physicalStrength, cooldown};
+
+        for (let key in timeForParts) {
+            if (timeForParts[key] === 0) {
+                timeForParts[key] = 10;
+            }
+        }
 
         const data = getRandomTraining(timeForParts, intensity);
 
