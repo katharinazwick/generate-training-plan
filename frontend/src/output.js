@@ -7,8 +7,7 @@ export function outputDatas(data) {
 
         const title = document.createElement('div');
         title.className = 'part-title';
-        title.textContent = part.charAt(0).toUpperCase() + part.slice(1) + " ";
-        console.log(data[part]);
+        title.textContent = part.charAt(0).toUpperCase() + part.slice(1) + " " + data[part].reduce((sum, ex) => sum + ex.time, 0);
         section.appendChild(title);
 
         data[part].forEach(ex => {

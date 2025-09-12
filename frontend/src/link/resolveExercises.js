@@ -9,7 +9,6 @@ export function resolveExercises(urlData) {
             .map(id => database.find(ex => ex.id === id))
             .filter(Boolean);
     });
-console.log(resolved);
     return resolved;
 }
 
