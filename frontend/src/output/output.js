@@ -1,7 +1,7 @@
 import {updateUrlWithData} from "../link/updateUrl.js";
 import {getRandomTrainingForPart} from "../generate/generatePlanForParts.js";
 
-export function outputDatas(data) {
+export function outputDatas(data, meta) {
     const container = document.getElementById('workoutContainer');
     container.innerHTML = '';
     Object.keys(data).forEach(part => {
@@ -17,6 +17,8 @@ export function outputDatas(data) {
         cube.className = 'part-cube';
         cube.addEventListener('click', () => {
             console.log(part);
+            data[part] = getRandomTrainingForPart(part, meta.timeForParts, meta.intensity);
+            console.log(data[part]);
         });
 
         // Text der Überschrift

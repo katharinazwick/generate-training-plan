@@ -46,8 +46,9 @@ export function buttonIsClicked() {
         }
 
         const data = getRandomTraining(timeForParts, intensity);
+        const meta = { timeForParts: { ...timeForParts }, intensity };
 
-        outputDatas(data);
+        outputDatas(data, meta);
         updateUrlWithData(data);
     });
 }
