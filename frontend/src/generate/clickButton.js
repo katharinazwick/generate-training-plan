@@ -31,9 +31,9 @@ export function buttonIsClicked() {
             !isValid(running, 0, 120, 5) ||
             !isValid(physicalStrength, 0, 120, 5) ||
             !isValid(cooldown, 0, 120, 5) ||
-            !isValid(intensity, 1, 10, 1)
+            !isValid(intensity, 1, 5, 1)
         ) {
-            alert("Please enter values between 0 and 120 in increments of 5!");
+            alert("Please enter values for running, physical Strength and intensity");
             return;
         }
 
