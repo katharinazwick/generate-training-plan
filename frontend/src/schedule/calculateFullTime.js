@@ -18,7 +18,7 @@ function updateTotalTime() {
         if (!isNaN(value)) total += value;
         enforceValidInput(input, 0, 120, 5);
     });
-    enforceValidInput(intensity, 1, 10, 1);
+    enforceValidInput(intensity, 1, 5, 1);
     totalTimeDisplay.textContent = `Total time: ${total} min`;
 }
 
