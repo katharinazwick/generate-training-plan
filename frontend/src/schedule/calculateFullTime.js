@@ -1,3 +1,5 @@
+import {enforceValidInput} from "./correctInput.js";
+
 const inputs = [
     document.getElementById("warmupInput"),
     document.getElementById("runningInput"),
@@ -13,6 +15,7 @@ function updateTotalTime() {
     inputs.forEach(input => {
         const value = Number(input.value);
         if (!isNaN(value)) total += value;
+        enforceValidInput(input, 0, 120, 5);
     });
     totalTimeDisplay.textContent = `Total time: ${total} min`;
 }
