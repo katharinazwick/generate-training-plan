@@ -7,6 +7,7 @@ const inputs = [
     document.getElementById("cooldownInput")
 ];
 
+const intensity = document.getElementById("intensityInput");
 const totalTimeDisplay = document.getElementById("totalTime");
 
 // Funktion zum Berechnen der Gesamtdauer
@@ -17,6 +18,7 @@ function updateTotalTime() {
         if (!isNaN(value)) total += value;
         enforceValidInput(input, 0, 120, 5);
     });
+    enforceValidInput(intensity, 1, 10, 1);
     totalTimeDisplay.textContent = `Total time: ${total} min`;
 }
 
@@ -24,3 +26,7 @@ function updateTotalTime() {
 inputs.forEach(input => {
     input.addEventListener("input", updateTotalTime);
 });
+
+intensity.addEventListener("input", updateTotalTime);
+
+
