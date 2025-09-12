@@ -1,0 +1,1 @@
+export const parts = ["warmup", "running", "physicalStrength", "cooldown"]
