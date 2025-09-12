@@ -30,12 +30,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 ((value - min) % step === 0)
             );
         };
+        console.log(parts[0])
+        //actually want to use the parts array but is invalid
 
         if (
-            !isValid(parts[0], 0, 120, 5) ||
-            !isValid(parts[1], 0, 120, 5) ||
-            !isValid(parts[2], 0, 120, 5) ||
-            !isValid(parts[3], 0, 120, 5)
+            !isValid(warmup, 0, 120, 5) ||
+            !isValid(running, 0, 120, 5) ||
+            !isValid(physicalStrength, 0, 120, 5) ||
+            !isValid(cooldown, 0, 120, 5)
         ) {
             alert("Please enter values between 0 and 120 in increments of 5!");
             return;
