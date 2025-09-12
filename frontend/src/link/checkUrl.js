@@ -3,7 +3,6 @@ import {resolveExercises} from "./resolveExercises.js";
 import {outputDatas} from "../output.js";
 import {getRandomTraining} from "../generate/generatePlan.js";
 import{readUrlData} from "./readUrl.js";
-import{enforceValidInput} from "../schedule/correctInput.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     const urlData = readUrlData();

@@ -1,5 +1,3 @@
-import {updateUrlWithData} from "./link/updateUrl.js";
-
 export function outputDatas(data) {
     const container = document.getElementById('workoutContainer');
     container.innerHTML = '';
