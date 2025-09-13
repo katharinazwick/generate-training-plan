@@ -5,6 +5,9 @@ export function outputDatas(data, meta) {
     const container = document.getElementById('workoutContainer');
     container.innerHTML = '';
     Object.keys(data).forEach(part => {
+        if (!data[part] || data[part].length === 0) {
+            return; // skippt diese Iteration
+        }
         const section = document.createElement('div');
         section.className = 'part-section';
 
