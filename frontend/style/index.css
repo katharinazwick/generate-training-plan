@@ -32,10 +32,18 @@
     font-family: Arial, sans-serif;
 }
 
+#scheduleH2 {
+    cursor: pointer;
+}
+
 #schedule {
     display: flex;
     flex-direction: column;
     gap: 15px; /* Abstand zwischen den Input-Zeilen */
+}
+
+#schedule.hidden {
+    display: none;
 }
 
 .input-row {
