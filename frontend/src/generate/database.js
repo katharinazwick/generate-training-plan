@@ -6,35 +6,35 @@ export const database = [
         time: 5,
         description: "400m",
         part: parts[0],
-        intensity: 1,
+        intensity: 3,
         id: "0a"
     }, {
         name: "Einlaufen",
         time: 10,
         description: "1600m",
         part: parts[0],
-        intensity: 4,
+        intensity: 3,
         id: "0b"
     }, {
         name: "Einlaufen mit Lauf-ABC",
         time: 10,
         description: "1600m mit Partner/Gruppe, abwechselnd 150m Laufen 50m Übung (ergibt 2 übungen pro 400m)",
         part: parts[0],
-        intensity: 5,
+        intensity: 3,
         id: "0c"
     }, {
         name: "Lauf-ABC",
         time: 5,
         description: "Anfersen, Kniehebe-, Seitwärts-, Kreuzlauf, Fußgelenksarbeit...",
         part: parts[0],
-        intensity: 1,
+        intensity: 4,
         id: "0d"
     }, {
         name: "Koordination",
         time: 5,
         description: "Slalom, Sprünge, Hockstrecksprünge",
         part: parts[0],
-        intensity: 4,
+        intensity: 2,
         id: "0e"
     }, {
         name: "Knotenlauf",
@@ -48,14 +48,14 @@ export const database = [
         time: 5,
         description: "400m, vorwärts, rückwärts, auf einem Bein",
         part: parts[0],
-        intensity: 2,
+        intensity: 3,
         id: "0g"
     }, {
         name: "Rückwärtslauf",
         time: 5,
         description: "400m",
         part: parts[0],
-        intensity: 2,
+        intensity: 4,
         id: "0h"
     },
     /////////////
@@ -64,7 +64,7 @@ export const database = [
         time: 5,
         description: "6 * 30m Sprints auf ein spontanes akustisches Signal",
         part: parts[1],
-        intensity: 2,
+        intensity: 3,
         id: "aa",
         type: "Kurzstrecke"
     }, {
@@ -72,7 +72,7 @@ export const database = [
         time: 10,
         description: "6 * 60m Sprint mit zurück gehen",
         part: parts[1],
-        intensity: 2,
+        intensity: 3,
         id: "ab",
         type: "Kurzstrecke"
     }, {
@@ -80,7 +80,7 @@ export const database = [
         time: 10,
         description: "4 * 100m mit zurück gehen",
         part: parts[1],
-        intensity: 3,
+        intensity: 4,
         id: "ac",
         type: "Kurzstrecke"
     }, {
@@ -90,14 +90,6 @@ export const database = [
         part: parts[1],
         intensity: 4,
         id: "ad",
-        type: "Kurzstrecke"
-    }, {
-        name: "lange Sprints",
-        time: 15,
-        description: "3 * 200m mit locker die Runde auslaufen und Pause",
-        part: parts[1],
-        intensity: 4,
-        id: "ae",
         type: "Kurzstrecke"
     }, {
         name: "Pyramidensprints",
@@ -168,7 +160,7 @@ export const database = [
         time: 15,
         description: "1200m Lauf mit 3 * 400m Sprint (Lauf, Sprint, Lauf, Sprint, Lauf, Sprint)",
         part: parts[1],
-        intensity: 5,
+        intensity: 4,
         id: "an",
         type: "Mittelstrecke"
     }, {
@@ -207,49 +199,49 @@ export const database = [
         time: 5,
         description: "normal, weit, eng, langsam",
         part: parts[2],
-        intensity: 5,
+        intensity: 4,
         id: "b0"
     }, {
         name: "Bauchzirkel",
         time: 10,
         description: "4 * (Sit-ups, Bicycle-Crunch, Plank, Pause",
         part: parts[2],
-        intensity: 5,
+        intensity: 2,
         id: "c0"
     }, {
         name: "Beinkraft",
         time: 5,
         description: "(3 * (20 Kniebeuge, 15 Ausfallschritt pro Bein, ???",
         part: parts[2],
-        intensity: 5,
+        intensity: 2,
         id: "d0"
     }, {
         name: "Auslaufen",
         time: 5,
         description: "800m",
         part: parts[3],
-        intensity: 2,
+        intensity: 3,
         id: "00"
     }, {
         name: "Dehnung",
         time: 5,
         description: "Fokus auf die belasteten Körperteile legen",
         part: parts[3],
-        intensity: 1,
+        intensity: 4,
         id: "01"
     }, {
         name: "Auslaufen",
         time: 10,
         description: "1600m",
         part: parts[3],
-        intensity: 3,
+        intensity: 2,
         id: "02"
     }, {
         name: "Gehen",
         time: 10,
         description: "400m normales Gehen",
         part: parts[3],
-        intensity: 1,
+        intensity: 4,
         id: "03"
     }
 ];
