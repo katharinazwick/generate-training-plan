@@ -33,7 +33,7 @@ export function buttonIsClicked() {
             !isValid(cooldown, 0, 120, 5) ||
             !isValid(intensity, 1, 5, 1)
         ) {
-            alert("Please enter values for running, physical Strength and intensity");
+            alert("Please enter a intensity");
             return;
         }
 
