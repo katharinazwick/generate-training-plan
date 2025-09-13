@@ -1,13 +1,11 @@
-import {database} from "./database.js";
+import { database } from "./database.js";
 
-
-export function getRandomTrainingForPart(part, timeForParts, targetAverageIntensity) {
+export function getRandomTrainingForPart(part, timeForParts, targetIntensity) {
     const partExercises = database.filter(ex => ex.part === part);
     const targetTime = timeForParts[part];
 
     let result = [];
     let currentTime = 0;
-    let intensitySum = 0;
     let usedTypes = new Set();
 
     // Shuffle-Funktion
@@ -15,26 +13,18 @@ export function getRandomTrainingForPart(part, timeForParts, targetAverageIntens
 
     for (let ex of shuffled) {
         const newTime = currentTime + ex.time;
-        const newIntensitySum = intensitySum + ex.intensity;
-        const newCount = result.length + 1;
-        const newAverage = newIntensitySum / newCount;
 
-        // Prüfen:
-        // 1. Zeit passt
-        // 2. Maximal zwei Typen
-        // 3. Durchschnitt nach Hinzufügen noch im Zielbereich (+-1)
+        // Bedingung: Zeit + max. zwei Typen + Intensität im Bereich
         if (
             newTime <= targetTime &&
             (usedTypes.has(ex.type) || usedTypes.size < 2) &&
-            newAverage <= targetAverageIntensity + 1
+            (ex.intensity >= targetIntensity - 1 && ex.intensity <= targetIntensity + 1)
         ) {
             result.push(ex);
             currentTime = newTime;
-            intensitySum = newIntensitySum;
             usedTypes.add(ex.type);
         }
 
-        // Stop nur, wenn Zeit erreicht
         if (currentTime >= targetTime) {
             break;
         }
