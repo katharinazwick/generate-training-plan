@@ -4,8 +4,7 @@ shareButton.addEventListener("click", async function () {
     if (navigator.share) {
         try {
             await navigator.share({
-                title: 'Meine Webseite',
-                text: 'Schau dir diesen Link an!',
+                text: 'Schau dir diesen Plan an!',
                 url: window.location.href
             });
             console.log('Erfolgreich geteilt!');
