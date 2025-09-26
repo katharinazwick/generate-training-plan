@@ -1,4 +1,4 @@
-const shareButton = document.getElementById("shareLink");
+const shareButton = document.getElementById("shareButton");
 
 shareButton.addEventListener("click", async function () {
     if (navigator.share) {
