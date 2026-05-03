@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
     document.getElementById("warmupInput").value = "";
     document.getElementById("runningInput").value = "";
-    document.getElementById("physicalStrengthInput").value = "";
+    //document.getElementById("physicalStrengthInput").value = "";
     document.getElementById("cooldownInput").value = "";
     document.getElementById("intensityInput").value = "";
 });

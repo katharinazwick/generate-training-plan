@@ -11,7 +11,7 @@ export function buttonIsClicked() {
         // Werte auslesen und in Number umwandeln
         const warmup = Number(document.getElementById("warmupInput").value);
         const running = Number(document.getElementById("runningInput").value);
-        const physicalStrength = Number(document.getElementById("physicalStrengthInput").value);
+        //const physicalStrength = Number(document.getElementById("physicalStrengthInput").value);
         const cooldown = Number(document.getElementById("cooldownInput").value);
         const intensity = Number(document.getElementById("intensityInput").value);
 //intesity an funktion weiterleiten
@@ -29,7 +29,7 @@ export function buttonIsClicked() {
         if (
             !isValid(warmup, 0, 120, 5) ||
             !isValid(running, 0, 120, 5) ||
-            !isValid(physicalStrength, 0, 120, 5) ||
+            //!isValid(physicalStrength, 0, 120, 5) ||
             !isValid(cooldown, 0, 120, 5) ||
             !isValid(intensity, 1, 5, 1)
         ) {
@@ -37,7 +37,7 @@ export function buttonIsClicked() {
             return;
         }
 
-        const timeForParts = {warmup, running, physicalStrength, cooldown};
+        const timeForParts = {warmup, running, cooldown}; //physicalStrength
 
         for (let key in timeForParts) {
             if (timeForParts[key] === 0 && (key === "warmup" || key === "cooldown")) {

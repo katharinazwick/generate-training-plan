@@ -3,7 +3,7 @@ import {enforceValidInput} from "./correctInput.js";
 const inputs = [
     document.getElementById("warmupInput"),
     document.getElementById("runningInput"),
-    document.getElementById("physicalStrengthInput"),
+    //document.getElementById("physicalStrengthInput"),
     document.getElementById("cooldownInput")
 ];
 

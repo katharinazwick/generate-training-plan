@@ -68,22 +68,6 @@ export const database = [
         id: "aa",
         type: "Kurzstrecke"
     }, {
-        name: "Reaktionssprints",
-        time: 5,
-        description: "3 * (Plank vor 3 Hütchen, Tennisball auf angesagt Farbe legen, auf Hepp 30m sprinten)",
-        part: parts[1],
-        intensity: 3,
-        id: "ab",
-        type: "Kurzstrecke"
-    }, {
-        name: "Reaktionssprints",
-        time: 5,
-        description: "3 * (breitbeinig stehen, A kugelt Tennisball, B versucht diesen einzuholen, max. 60m)",
-        part: parts[1],
-        intensity: 3,
-        id: "ac",
-        type: "Kurzstrecke"
-    }, {
         name: "kurze Sprints",
         time: 10,
         description: "6 * 60m Sprint mit zurück gehen",
@@ -237,6 +221,7 @@ export const database = [
         type: "Langstrecke"
     },
     ///////////////////////////
+    /*
     {
         name: "Planks",
         time: 10,
@@ -314,7 +299,7 @@ export const database = [
         part: parts[2],
         intensity: 4,
         id: "j0"
-    },
+    },*/
     //////////////
     {
         name: "Auslaufen",
@@ -326,7 +311,7 @@ export const database = [
     }, {
         name: "Dehnung",
         time: 5,
-        description: "Fokus auf die belasteten Körperteile legen",
+        description: "",
         part: parts[3],
         intensity: 4,
         id: "01"
@@ -337,12 +322,5 @@ export const database = [
         part: parts[3],
         intensity: 2,
         id: "02"
-    }, {
-        name: "Gehen",
-        time: 10,
-        description: "400m normales Gehen",
-        part: parts[3],
-        intensity: 4,
-        id: "03"
     }
 ];
